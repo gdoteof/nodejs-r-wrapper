@@ -1,0 +1,11 @@
+{
+  "name": "tylerr",
+  "version": "0.0.1",
+  "description": "wrapper for tyler's r script",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
