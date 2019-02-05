@@ -21,7 +21,7 @@ app.post('/B', function(req, res) {
   discover = req.body.discover;
 	argstring = ' "' + artist + '" "' + email + '" "' + discover +'"';
 	const { exec } = require('child_process');
-	exec('Rscript /root/rcode/lastFMcode_v0.11_99.R'+ argstring, (err, stdout, stderr) => {
+  exec('sudo docker run -it --rm -v /home/ubuntu/rcode:/code -v /home/ubuntu/rcode/artists:/home/ubuntu/artists rserver Rscript /code/lastFM.R '+ argstring, (err, stdout, stderr) => {
   if (err) {
     //some err occurred
     console.error(err)
