@@ -12,6 +12,7 @@ app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
 // respond with "hello world" when a GET request is made to the homepage
 app.get('/', function (req, res) {
   res.send('hi tyler')
+  console.log("root loaded");
 })
 
 app.post('/B', function(req, res) {

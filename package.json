@@ -7,5 +7,18 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4",
+    "greenlock-express": "^2.6.7"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gdoteof/nodejs-r-wrapper.git"
+  },
+  "bugs": {
+    "url": "https://github.com/gdoteof/nodejs-r-wrapper/issues"
+  },
+  "homepage": "https://github.com/gdoteof/nodejs-r-wrapper#readme"
 }
