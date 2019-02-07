@@ -37,7 +37,5 @@ app.get('/app', function(req, res) {
     res.sendFile(path.join(__dirname + '/index.html'));
 });
 
-const port = 3000
 
-
-app.listen(port, () => console.log(`Example app listening on port ${port}!`))
+module.exports = app
