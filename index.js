@@ -15,13 +15,12 @@ app.get('/', function (req, res) {
 })
 
 app.post('/B', function(req, res) {
-	console.log(req.body);
-	artist = req.body.artist;
+  artist = req.body.artist;
   email = req.body.email;
   discover = req.body.discover || 'off';
-	argstring = ' "' + artist + '" "' + email + '" "' + discover +'"';
-	const { exec } = require('child_process');
-  exec('sudo docker run -it --rm -v /home/ubuntu/rcode:/code -v /home/ubuntu/rcode/artists:/home/ubuntu/artists rserver Rscript /code/lastFM.R '+ argstring, (err, stdout, stderr) => {
+  argstring = ' "' + artist + '" "' + email + '" "' + discover +'"';
+  const { exec } = require('child_process');
+  exec('sudo docker run -i --rm -v /home/ubuntu/rcode:/code -v /home/ubuntu/rcode/artists:/home/ubuntu/artists rserver Rscript /code/lastFM.R '+ argstring, (err, stdout, stderr) => {
   if (err) {
     //some err occurred
     console.error(err)
